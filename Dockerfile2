@@ -1,0 +1,4 @@
+FROM alpine
+RUN apk add util-linux coreutils && apk update && apk upgrade
+COPY indeed-csi /indeed-csi
+ENTRYPOINT ["/indeed-csi"]
